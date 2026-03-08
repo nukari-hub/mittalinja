@@ -29,16 +29,28 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4">
             <img 
               src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/oxvp2ga3_cropped-mittalinja-logo-300x86-1.png"
               alt="Mittalinja A1"
-              className="h-8 md:h-10 w-auto"
+              className="h-8 md:h-10 w-auto cursor-pointer"
+              onClick={() => scrollToSection('hero')}
+            />
+            <img 
+              src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/a4nyyudm_AAA-Gold-logo-2025-FI-transparent-768x431.png"
+              alt="AAA Gold"
+              className="h-8 w-auto"
             />
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
+            <button
+              onClick={() => scrollToSection('hero')}
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+            >
+              Etusivu
+            </button>
             <button
               onClick={() => scrollToSection('palvelut')}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
@@ -46,10 +58,16 @@ const Header = () => {
               Palvelut
             </button>
             <button
-              onClick={() => scrollToSection('meista')}
+              onClick={() => scrollToSection('referenssit')}
               className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
             >
-              Meistä
+              Referenssit
+            </button>
+            <button
+              onClick={() => scrollToSection('kalusto')}
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+            >
+              Kalusto
             </button>
             <button
               onClick={() => scrollToSection('yhteystiedot')}
@@ -61,6 +79,13 @@ const Header = () => {
 
           {/* Contact Info */}
           <div className="flex items-center space-x-4">
+            <a
+              href="mailto:info@mittalinja.fi"
+              className="hidden xl:flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            >
+              <Mail className="w-4 h-4" />
+              <span className="font-medium">info@mittalinja.fi</span>
+            </a>
             <a
               href="tel:+358400460872"
               className="hidden lg:flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
