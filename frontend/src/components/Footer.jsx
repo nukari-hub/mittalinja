@@ -10,7 +10,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-blue-400">Mittalinja A1 Oy</h3>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/oxvp2ga3_cropped-mittalinja-logo-300x86-1.png"
+              alt="Mittalinja A1"
+              className="h-10 w-auto mb-4 brightness-0 invert"
+            />
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0 text-blue-400" />
