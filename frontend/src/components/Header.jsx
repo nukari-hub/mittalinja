@@ -39,7 +39,7 @@ const Header = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/a4nyyudm_AAA-Gold-logo-2025-FI-transparent-768x431.png"
               alt="AAA Gold"
-              className="h-8 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
           </div>
 
