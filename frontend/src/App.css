@@ -46,3 +46,14 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Hide Made with Emergent badge */
+a[href*="emergent.sh"],
+a[href*="app.emergent"],
+[class*="emergent"],
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: fixed"][style*="right"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
