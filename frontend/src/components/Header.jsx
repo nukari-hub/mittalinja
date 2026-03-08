@@ -30,9 +30,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-blue-600">
-              Mittalinja A1
-            </div>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/oxvp2ga3_cropped-mittalinja-logo-300x86-1.png"
+              alt="Mittalinja A1"
+              className="h-8 md:h-10 w-auto"
+            />
           </div>
 
           {/* Navigation */}
