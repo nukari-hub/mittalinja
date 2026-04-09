@@ -1,11 +1,9 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
-import { Building2, Mountain, Plane, Scan, Calculator, Tractor } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Building2,
       title: 'Rakennusmittaus',
       description: 'Rakennusmittaus tulee tarpeeseen, kun haluat tarkat mitat tietystä rakennuksesta.',
       image: 'https://images.unsplash.com/photo-1694521787162-5373b598945c',
@@ -18,7 +16,6 @@ const ServicesSection = () => {
       ]
     },
     {
-      icon: Mountain,
       title: 'Maanmittaus',
       description: 'Maanmittauspalvelu tulee tarpeeseen, kun haluat tarkat rajat maakappaleelle tai haluat tarkan kartan korkeusvaihteluineen tontista.',
       image: 'https://images.unsplash.com/photo-1628158088936-68ccaaa400dc',
@@ -31,7 +28,6 @@ const ServicesSection = () => {
       ]
     },
     {
-      icon: Plane,
       title: 'DRONE kartoitus ja kuvaus',
       description: 'UAV-kopterilla voimme kartoittaa nopeasti isoja alueita, toki myös pienet alueet soveltuvat kartoitettavaksi.',
       image: 'https://images.unsplash.com/photo-1706380003139-7471c33ca2b2',
@@ -44,7 +40,6 @@ const ServicesSection = () => {
       ]
     },
     {
-      icon: Scan,
       title: 'Laserkeilaus',
       description: 'Laserkeilaus eli 3D-skannaus on erinomainen menetelmä, jonka avulla voidaan kartoittaa rakennusten lisäksi myös esimerkiksi maastokohteita.',
       image: 'https://images.unsplash.com/photo-1694106722138-27187c94f50b',
@@ -57,7 +52,6 @@ const ServicesSection = () => {
       ]
     },
     {
-      icon: Calculator,
       title: 'Laskenta ja tarkepiirustukset',
       description: 'Laskenta ja tarkepiirustusten avulla voidaan toteuttaa esim. maanalaisia putki- ja johtotarkepiirustuksia.',
       image: 'https://images.unsplash.com/photo-1526593714223-37c814d5aea9',
@@ -70,7 +64,6 @@ const ServicesSection = () => {
       ]
     },
     {
-      icon: Tractor,
       title: 'Koneohjausmallit',
       description: 'Tuotamme maarakentamisen koneohjausmalleja tierakentamiseen, infrarakentamiseen ja rakennushankkeisiin.',
       image: 'https://images.unsplash.com/photo-1628158145409-9e222b56cc0b',
@@ -101,7 +94,6 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
             return (
               <Card
                 key={index}
@@ -116,8 +108,12 @@ const ServicesSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex items-center space-x-3 mb-2">
-                      <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border-2 border-white/30">
+                        <img 
+                          src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/igp1cb8m_mitta.png"
+                          alt="A1"
+                          className="w-8 h-8 object-contain"
+                        />
                       </div>
                       <h4 className="text-2xl font-bold text-white">{service.title}</h4>
                     </div>
