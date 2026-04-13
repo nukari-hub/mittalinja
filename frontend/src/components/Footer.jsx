@@ -13,7 +13,7 @@ const Footer = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/oxvp2ga3_cropped-mittalinja-logo-300x86-1.png"
               alt="Mittalinja A1"
-              className="h-10 w-auto mb-4 brightness-0 invert"
+              className="h-10 w-auto mb-4"
             />
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start space-x-3">
