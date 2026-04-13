@@ -67,8 +67,8 @@ const ReferencesSection = () => {
           </p>
         </div>
 
-        {/* References Table */}
-        <div className="max-w-7xl mx-auto">
+        {/* References Table - Desktop */}
+        <div className="max-w-7xl mx-auto hidden md:block">
           <div className="overflow-x-auto bg-white shadow-lg rounded-lg border border-gray-200">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-blue-600">
@@ -101,6 +101,28 @@ const ReferencesSection = () => {
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* References Cards - Mobile */}
+        <div className="md:hidden space-y-4">
+          {references.map((ref, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg border border-gray-200 p-4 hover:shadow-xl transition-shadow">
+              <div className="space-y-3">
+                <div>
+                  <span className="text-xs font-semibold text-blue-600 uppercase">Tilaaja</span>
+                  <p className="text-sm font-bold text-gray-900 mt-1">{ref.client}</p>
+                </div>
+                <div>
+                  <span className="text-xs font-semibold text-blue-600 uppercase">Kohde</span>
+                  <p className="text-sm text-gray-900 font-medium mt-1">{ref.project}</p>
+                </div>
+                <div>
+                  <span className="text-xs font-semibold text-blue-600 uppercase">Toimeksianto</span>
+                  <p className="text-sm text-gray-600 mt-1">{ref.work}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Client Info */}

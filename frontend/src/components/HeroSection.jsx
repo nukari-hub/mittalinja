@@ -21,60 +21,60 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-4 py-32 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content - Text */}
-          <div className="space-y-8 animate-fadeIn text-white">
-            <p className="text-blue-200 text-base md:text-lg font-semibold tracking-widest uppercase">
+          <div className="space-y-6 md:space-y-8 animate-fadeIn text-white text-center lg:text-left">
+            <p className="text-blue-200 text-sm md:text-lg font-semibold tracking-widest uppercase">
               Rakennustekniset mittauspalvelut ja kartoitukset
             </p>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               A1-Luokan<br />
               <span className="text-blue-300">mittauspalveluja</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-blue-100 max-w-2xl leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-blue-100 max-w-2xl leading-relaxed mx-auto lg:mx-0">
               A1-Luokan mittauspalveluja vuodesta 2004 alkaen. Asiakkaitamme ovat rakennusliikkeet, 
               maanrakentajat, suunnittelutoimistot, kunnat, kaupungit sekä omakotitalorakentajat.
             </p>
 
             {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 py-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-6 h-6 rounded-full bg-blue-400 flex items-center justify-center flex-shrink-0">
+            <div className="grid grid-cols-1 gap-3 md:gap-4 py-4 max-w-md mx-auto lg:mx-0">
+              <div className="flex items-center space-x-2 justify-center lg:justify-start">
+                <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-400 flex items-center justify-center flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                 </div>
                 <span className="text-sm md:text-base font-medium">Huippuluokan mittauslaitteet</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-6 h-6 rounded-full bg-blue-400 flex items-center justify-center flex-shrink-0">
+              <div className="flex items-center space-x-2 justify-center lg:justify-start">
+                <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-400 flex items-center justify-center flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                 </div>
                 <span className="text-sm md:text-base font-medium">Yli 20 vuoden kokemus</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-6 h-6 rounded-full bg-blue-400 flex items-center justify-center flex-shrink-0">
+              <div className="flex items-center space-x-2 justify-center lg:justify-start">
+                <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-400 flex items-center justify-center flex-shrink-0">
                   <div className="w-2 h-2 rounded-full bg-white"></div>
                 </div>
                 <span className="text-sm md:text-base font-medium">Vastaamme 24h sisällä</span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link to="/yhteystiedot">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+              <Link to="/yhteystiedot" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-7 text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg"
+                  className="w-full sm:w-auto bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 md:px-10 py-6 md:py-7 text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg"
                 >
                   Pyydä tarjous
                 </Button>
               </Link>
-              <Link to="/palvelut">
+              <Link to="/palvelut" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-10 py-7 text-lg transition-all duration-300 hover:scale-105"
+                  className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 md:px-10 py-6 md:py-7 text-base md:text-lg transition-all duration-300 hover:scale-105"
                 >
                   Tutustu palveluihin
                 </Button>
