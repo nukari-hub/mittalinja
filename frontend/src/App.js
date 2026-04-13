@@ -37,7 +37,7 @@ function App() {
             <Route path="/ukk" element={<FAQPage />} />
             <Route path="/yhteystiedot" element={<ContactPage />} />
             <Route path="/tietosuoja" element={<PrivacyPage />} />
-            <Route path="/admin/viestit" element={<AdminMessagesPage />} />
+            <Route path="/admin/viestit2043409503" element={<AdminMessagesPage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
