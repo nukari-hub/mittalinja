@@ -96,7 +96,7 @@ const HeroSection = () => {
       {/* Scroll Down Indicator */}
       <button
         onClick={scrollToBottom}
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-colors duration-200 animate-slowBounce"
+        className="absolute bottom-12 left-0 right-0 mx-auto w-fit flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-colors duration-200 animate-slowBounce"
       >
         <span className="text-sm font-medium">Vieritä alas</span>
         <ChevronDown className="w-6 h-6" />
