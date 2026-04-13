@@ -6,6 +6,7 @@ import AboutSection from '../components/AboutSection';
 import TargetCustomers from '../components/TargetCustomers';
 import ReferencesSection from '../components/ReferencesSection';
 import EquipmentSection from '../components/EquipmentSection';
+import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
@@ -19,6 +20,7 @@ const HomePage = () => {
       <TargetCustomers />
       <ReferencesSection />
       <EquipmentSection />
+      <FAQSection />
       <ContactSection />
       <Footer />
     </div>
