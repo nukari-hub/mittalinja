@@ -4,6 +4,9 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -13,15 +16,36 @@ const ContactSection = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast({
-      title: 'Kiitos viestistäsi!',
-      description: 'Tämä on demo-versio. Lomaketta ei lähetetä. Vastaamme yhteydenottoihin arkipäivisin 24 tunnin sisällä.',
-      duration: 5000
-    });
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const response = await axios.post(`${BACKEND_URL}/api/contact`, formData);
+      
+      if (response.data.success) {
+        toast({
+          title: 'Kiitos viestistäsi!',
+          description: response.data.message,
+          duration: 5000
+        });
+        
+        // Reset form
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: 'Virhe',
+        description: error.response?.data?.detail || 'Viestin lähettäminen epäonnistui. Yritä myöhemmin uudelleen tai soita meille.',
+        variant: 'destructive',
+        duration: 5000
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -184,13 +208,14 @@ const ContactSection = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-6 text-lg transition-colors duration-200"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-6 text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Lähetä viesti
+                {isSubmitting ? 'Lähetetään...' : 'Lähetä viesti'}
               </Button>
 
               <p className="text-sm text-gray-500 text-center">
-                Tämä on demo-versio. Lomaketta ei lähetetä.
+                Vastaamme yhteydenottoihin arkipäivisin 24 tunnin sisällä.
               </p>
             </form>
           </div>

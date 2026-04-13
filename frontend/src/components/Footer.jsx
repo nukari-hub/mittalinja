@@ -69,7 +69,7 @@ const Footer = () => {
               Copyright © {currentYear} Mittalinja A1 Oy
             </p>
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
+              <a href="/tietosuoja" className="text-gray-400 hover:text-blue-400 transition-colors duration-200 text-sm">
                 Tietosuoja
               </a>
             </div>
