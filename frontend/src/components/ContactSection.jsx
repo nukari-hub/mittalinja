@@ -14,7 +14,8 @@ const ContactSection = () => {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    honeypot: '' // Spam protection
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -33,7 +34,7 @@ const ContactSection = () => {
         });
         
         // Reset form
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', message: '', honeypot: '' });
       }
     } catch (error) {
       console.error('Error sending message:', error);
@@ -189,6 +190,18 @@ const ContactSection = () => {
                   placeholder="+358 40 123 4567"
                 />
               </div>
+
+              {/* Honeypot field - hidden from users, spam bots will fill it */}
+              <input
+                type="text"
+                name="honeypot"
+                value={formData.honeypot}
+                onChange={handleChange}
+                style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px' }}
+                tabIndex="-1"
+                autoComplete="off"
+                aria-hidden="true"
+              />
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">

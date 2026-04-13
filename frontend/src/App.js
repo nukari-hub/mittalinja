@@ -8,6 +8,7 @@ import EquipmentPage from './pages/EquipmentPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPage from './pages/PrivacyPage';
+import AdminMessagesPage from './pages/AdminMessagesPage';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/ukk" element={<FAQPage />} />
           <Route path="/yhteystiedot" element={<ContactPage />} />
           <Route path="/tietosuoja" element={<PrivacyPage />} />
+          <Route path="/admin/viestit" element={<AdminMessagesPage />} />
         </Routes>
       </BrowserRouter>
     </div>
