@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
+import OptimizedImage from './OptimizedImage';
 
 const EquipmentSection = () => {
   const equipment = [
@@ -69,9 +70,11 @@ const EquipmentSection = () => {
               className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white"
             >
               <div className="relative h-64 overflow-hidden">
-                <img
+                <OptimizedImage
                   src={item.image}
                   alt={item.name}
+                  width={600}
+                  quality={75}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/50 to-transparent"></div>

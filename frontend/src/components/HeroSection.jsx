@@ -13,9 +13,11 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1682663810771-89d21838530f"
+          src="https://images.unsplash.com/photo-1682663810771-89d21838530f?w=1920&q=75&fm=webp&fit=crop"
           alt="Mittauspalvelut tausta"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/85 to-blue-700/80"></div>
       </div>

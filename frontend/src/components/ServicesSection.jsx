@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
+import OptimizedImage from './OptimizedImage';
 
 const ServicesSection = () => {
   const services = [
@@ -100,9 +101,11 @@ const ServicesSection = () => {
                 className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={service.image}
                     alt={service.title}
+                    width={600}
+                    quality={75}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/50 to-transparent"></div>
@@ -113,6 +116,7 @@ const ServicesSection = () => {
                           src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/igp1cb8m_mitta.png"
                           alt="A1"
                           className="w-8 h-8 object-contain"
+                          loading="lazy"
                         />
                       </div>
                       <h4 className="text-2xl font-bold text-white">{service.title}</h4>
