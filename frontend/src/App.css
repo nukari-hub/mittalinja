@@ -47,13 +47,19 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hide Made with Emergent badge */
+/* Hide Made with Emergent badge - Enhanced */
 a[href*="emergent.sh"],
 a[href*="app.emergent"],
+a[id*="emergent"],
+div[id*="emergent"],
 [class*="emergent"],
 div[style*="position: fixed"][style*="bottom"],
-div[style*="position: fixed"][style*="right"] {
+div[style*="position: fixed"][style*="right"],
+a[style*="position: fixed"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
