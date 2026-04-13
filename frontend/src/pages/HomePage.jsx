@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SEOHead from '../components/SEOHead';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
 import AboutSection from '../components/AboutSection';
 import TargetCustomers from '../components/TargetCustomers';
-import ReferencesSection from '../components/ReferencesSection';
-import EquipmentSection from '../components/EquipmentSection';
-import FAQSection from '../components/FAQSection';
-import ContactSection from '../components/ContactSection';
+import FAQTeaser from '../components/FAQTeaser';
 import Footer from '../components/Footer';
 
 const HomePage = () => {
@@ -21,10 +18,7 @@ const HomePage = () => {
         <ServicesSection />
         <AboutSection />
         <TargetCustomers />
-        <ReferencesSection />
-        <EquipmentSection />
-        <FAQSection />
-        <ContactSection />
+        <FAQTeaser />
         <Footer />
       </div>
     </>

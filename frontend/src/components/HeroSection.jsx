@@ -1,13 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { ChevronDown } from 'lucide-react';
 
 const HeroSection = () => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToBottom = () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   };
 
   return (
@@ -64,21 +62,23 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                onClick={() => scrollToSection('yhteystiedot')}
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-7 text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg"
-              >
-                Pyydä tarjous
-              </Button>
-              <Button
-                onClick={() => scrollToSection('palvelut')}
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-10 py-7 text-lg transition-all duration-300 hover:scale-105"
-              >
-                Tutustu palveluihin
-              </Button>
+              <Link to="/yhteystiedot">
+                <Button
+                  size="lg"
+                  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-7 text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg"
+                >
+                  Pyydä tarjous
+                </Button>
+              </Link>
+              <Link to="/palvelut">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-10 py-7 text-lg transition-all duration-300 hover:scale-105"
+                >
+                  Tutustu palveluihin
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ const HeroSection = () => {
 
       {/* Scroll Down Indicator */}
       <button
-        onClick={() => scrollToSection('palvelut')}
+        onClick={scrollToBottom}
         className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2 text-white/80 hover:text-white transition-colors duration-200 animate-slowBounce"
       >
         <span className="text-sm font-medium">Vieritä alas</span>
