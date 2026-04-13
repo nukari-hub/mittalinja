@@ -25,10 +25,6 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content - Text */}
           <div className="space-y-6 md:space-y-8 animate-fadeIn text-white text-center lg:text-left">
-            <p className="text-blue-200 text-sm md:text-lg font-semibold tracking-widest uppercase">
-              Rakennustekniset mittauspalvelut ja kartoitukset
-            </p>
-            
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               A1-Luokan<br />
               <span className="text-blue-300">mittauspalveluja</span>
