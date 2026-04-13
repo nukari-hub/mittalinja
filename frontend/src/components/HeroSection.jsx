@@ -86,9 +86,9 @@ const HeroSection = () => {
           <div className="hidden lg:flex items-center justify-center animate-fadeIn">
             <div className="relative w-full max-w-2xl">
               <img
-                src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/nwnaju3s_ml-header-illustration-2.jpg"
+                src="https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/jcu7153m_mittalinja.png"
                 alt="Mittaustyö illustraatio"
-                className="w-full h-auto drop-shadow-2xl animate-float rounded-2xl"
+                className="w-full h-auto drop-shadow-2xl animate-float"
               />
             </div>
           </div>
