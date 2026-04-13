@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { HelmetProvider } from 'react-helmet-async';
 import "@/index.css";
 import App from "@/App";
 import { Toaster } from "@/components/ui/toaster";
@@ -7,7 +8,9 @@ import { Toaster } from "@/components/ui/toaster";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
-    <Toaster />
+    <HelmetProvider>
+      <App />
+      <Toaster />
+    </HelmetProvider>
   </React.StrictMode>,
 );
