@@ -80,28 +80,10 @@ const ContactSection = () => {
     }
   ];
 
-  const billingInfo = [
-    {
-      label: 'Y-tunnus',
-      value: '2305871-5'
-    },
-    {
-      label: 'Laskutusosoite',
-      value: 'Mittalinja A1 Oy'
-    },
-    {
-      label: '',
-      value: 'Naapurinkuja 1'
-    },
-    {
-      label: '',
-      value: '01670 Vantaa'
-    },
-    {
-      label: 'Sähköpostilaskutus',
-      value: 'info@mittalinja.fi'
-    }
-  ];
+  const billingInfo = {
+    company: 'Mittalinja A1 Oy (2305871-5)',
+    networkInvoiceAddress: '003723058715'
+  };
 
   return (
     <section id="yhteystiedot" className="py-20 md:py-32 bg-gradient-to-b from-white to-blue-50">
@@ -159,19 +141,12 @@ const ContactSection = () => {
                 </svg>
                 Laskutustiedot
               </h4>
-              <div className="space-y-2">
-                {billingInfo.map((info, index) => (
-                  <div key={index} className={info.label ? "flex justify-between items-center" : ""}>
-                    {info.label ? (
-                      <>
-                        <span className="text-sm font-medium text-gray-600">{info.label}:</span>
-                        <span className="text-sm text-gray-900 font-semibold">{info.value}</span>
-                      </>
-                    ) : (
-                      <p className="text-sm text-gray-700 pl-4">{info.value}</p>
-                    )}
-                  </div>
-                ))}
+              <div className="space-y-3">
+                <p className="text-gray-900 font-semibold">{billingInfo.company}</p>
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">Verkkolaskuosoite:</p>
+                  <p className="text-gray-900 font-mono font-semibold">{billingInfo.networkInvoiceAddress}</p>
+                </div>
               </div>
             </div>
 
