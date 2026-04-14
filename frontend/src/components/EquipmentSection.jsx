@@ -31,16 +31,16 @@ const EquipmentSection = () => {
 
   const leicaImages = [
     {
-      url: 'https://images.unsplash.com/photo-1526593714223-37c814d5aea9',
-      alt: 'Leica taakymeetri mittaustyössä'
+      url: 'https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/4x35xlek_cs20-2.jpg',
+      alt: 'Leica CS20 kenttäkontrolleri'
     },
     {
-      url: 'https://images.unsplash.com/photo-1694106722138-27187c94f50b',
-      alt: 'Leica laserkeilain'
+      url: 'https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/imhtuc0n_Leica%20RTC360-1.jpg',
+      alt: 'Leica RTC360 laserkeilain'
     },
     {
-      url: 'https://images.unsplash.com/photo-1682663810771-89d21838530f',
-      alt: 'Mittaustyö rakennuskohteessa'
+      url: 'https://customer-assets.emergentagent.com/job_mittalinja-preview/artifacts/j9q43epn_Leica-Surveying-Equipment.jpeg',
+      alt: 'Leica mittauslaite jalustalla'
     }
   ];
 

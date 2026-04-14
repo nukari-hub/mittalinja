@@ -80,6 +80,29 @@ const ContactSection = () => {
     }
   ];
 
+  const billingInfo = [
+    {
+      label: 'Y-tunnus',
+      value: '2305871-5'
+    },
+    {
+      label: 'Laskutusosoite',
+      value: 'Mittalinja A1 Oy'
+    },
+    {
+      label: '',
+      value: 'Naapurinkuja 1'
+    },
+    {
+      label: '',
+      value: '01670 Vantaa'
+    },
+    {
+      label: 'Sähköpostilaskutus',
+      value: 'info@mittalinja.fi'
+    }
+  ];
+
   return (
     <section id="yhteystiedot" className="py-20 md:py-32 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto px-4">
@@ -127,6 +150,30 @@ const ContactSection = () => {
                 </div>
               );
             })}
+
+            {/* Billing Info */}
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg border border-gray-200">
+              <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Laskutustiedot
+              </h4>
+              <div className="space-y-2">
+                {billingInfo.map((info, index) => (
+                  <div key={index} className={info.label ? "flex justify-between items-center" : ""}>
+                    {info.label ? (
+                      <>
+                        <span className="text-sm font-medium text-gray-600">{info.label}:</span>
+                        <span className="text-sm text-gray-900 font-semibold">{info.value}</span>
+                      </>
+                    ) : (
+                      <p className="text-sm text-gray-700 pl-4">{info.value}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Additional Info */}
             <div className="bg-blue-600 rounded-2xl p-8 text-white shadow-lg">
