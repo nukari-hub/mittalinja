@@ -233,6 +233,181 @@ const ContactSection = () => {
             </form>
           </div>
         </div>
+
+        {/* Team Section */}
+        <div className="mt-24 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Tiimimme
+            </h3>
+            <p className="text-lg text-gray-600">
+              Asiantuntevat ammattilaiset palveluksessasi
+            </p>
+          </div>
+
+          {/* Mittalinja A1 Team */}
+          <div className="mb-12">
+            <h4 className="text-xl font-bold text-gray-800 mb-6 pb-3 border-b-2 border-blue-600">
+              Mittalinja A1 Oy
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Ari Piiroinen */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border-l-4 border-blue-600">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Ari Piiroinen</h5>
+                <p className="text-sm text-blue-600 font-medium mb-4">Toimitusjohtaja, mittaustyönjohto</p>
+                <div className="space-y-2">
+                  <a href="tel:+358400460872" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 400 460 872</span>
+                  </a>
+                  <a href="mailto:ari.piiroinen@mittalinja.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">ari.piiroinen@mittalinja.fi</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Tuomas Saavalainen */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Tuomas Saavalainen</h5>
+                <p className="text-sm text-gray-500 font-medium mb-4">&nbsp;</p>
+                <div className="space-y-2">
+                  <a href="tel:+358405746035" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 405 746 035</span>
+                  </a>
+                  <a href="mailto:tuomas.saavalainen@mittalinja.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">tuomas.saavalainen@mittalinja.fi</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Jari Syrjä */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Jari Syrjä</h5>
+                <p className="text-sm text-gray-500 font-medium mb-4">&nbsp;</p>
+                <div className="space-y-2">
+                  <a href="tel:+358402580838" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 402 580 838</span>
+                  </a>
+                  <a href="mailto:jari.syrja@mittalinja.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">jari.syrja@mittalinja.fi</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Antero Torssonen */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Antero Torssonen</h5>
+                <p className="text-sm text-blue-600 font-medium mb-4">Drone lennot ja laserkeilaus</p>
+                <div className="space-y-2">
+                  <a href="mailto:antero.torssonen@mittalinja.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">antero.torssonen@mittalinja.fi</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Juri Kantola */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Juri Kantola</h5>
+                <p className="text-sm text-gray-500 font-medium mb-4">&nbsp;</p>
+                <div className="space-y-2">
+                  <a href="tel:+358400163598" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 400 163 598</span>
+                  </a>
+                  <a href="mailto:juri.kantola@mittalinja.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">juri.kantola@mittalinja.fi</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Sami Piiroinen */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Sami Piiroinen</h5>
+                <p className="text-sm text-gray-500 font-medium mb-4">&nbsp;</p>
+                <div className="space-y-2">
+                  <a href="tel:+358406538095" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 406 538 095</span>
+                  </a>
+                  <a href="mailto:sami.piiroinen@mittalinja.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">sami.piiroinen@mittalinja.fi</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Juha Kosonen */}
+              <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Juha Kosonen</h5>
+                <p className="text-sm text-gray-500 font-medium mb-4">&nbsp;</p>
+                <div className="space-y-2">
+                  <a href="tel:+358406538225" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 406 538 225</span>
+                  </a>
+                  <a href="mailto:juha.kosonen@mittalinja.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">juha.kosonen@mittalinja.fi</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Partners Section */}
+          <div>
+            <h4 className="text-xl font-bold text-gray-800 mb-6 pb-3 border-b-2 border-gray-300">
+              Yhteistyökumppanit
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Tuomas Klaus - Sankari */}
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Tuomas Klaus</h5>
+                <p className="text-sm text-blue-600 font-medium mb-2">3D-mallinnus, IFC mallit</p>
+                <p className="text-sm text-gray-600 font-semibold mb-3">Arkkitehdit Sankari Oy</p>
+                <div className="space-y-2">
+                  <a href="tel:+358503033396" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 503 033 396</span>
+                  </a>
+                  <a href="mailto:tuomas.klaus@sankari.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">tuomas.klaus@sankari.fi</span>
+                  </a>
+                  <a href="https://www.sankari.fi" target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors text-sm font-medium mt-2">
+                    <span>→ www.sankari.fi</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Nina Lindroth - Tiliporras */}
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200">
+                <h5 className="text-lg font-bold text-gray-900 mb-1">Nina Lindroth</h5>
+                <p className="text-sm text-gray-600 font-semibold mb-4">Tiliporras Uusimaa Oy</p>
+                <div className="space-y-2">
+                  <a href="tel:+358102021111" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Phone className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm">+358 102 021 111</span>
+                  </a>
+                  <a href="mailto:nina.lindroth@tiliporras.fi" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">
+                    <Mail className="w-4 h-4 mr-2 text-gray-400 group-hover:text-blue-600" />
+                    <span className="text-sm break-all">nina.lindroth@tiliporras.fi</span>
+                  </a>
+                  <a href="https://www.tiliporras.fi" target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors text-sm font-medium mt-2">
+                    <span>→ www.tiliporras.fi</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
