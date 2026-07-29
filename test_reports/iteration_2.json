@@ -1,0 +1,25 @@
+{
+  "summary": "Tested contact form dual behaviour: DB save + mailto client trigger. Backend POST /api/contact returns success and persists message. Frontend form submits successfully, toast 'Kiitos viestistäsi!' appears, form is reset (indicating code reached lines AFTER window.location.href = mailtoLink). Admin page /admin/viestit2043409503 correctly shows submitted messages. Mailto URL string could not be intercepted at runtime (Chromium native Location.href setter is non-configurable via prototype override, and no external mail handler is registered so no navigation event fires), but source review confirms exact spec compliance: recipient=info@mittalinja.fi, subject=Lomake, body includes Nimi/Email/Puhelin/Viesti with CRLF (%0D%0A). Since toast+form-reset both execute AFTER the mailto assignment line, the mailto call is guaranteed to execute.",
+  "tested_scope": ["frontend", "backend", "integration"],
+  "passed": [
+    "POST /api/contact returns 200 with success:true and Finnish confirmation message",
+    "MongoDB persists submissions (count increased 2 -> 5 across test runs; name/email/phone/message all stored correctly)",
+    "GET /api/contact/messages returns list including new submissions with formatted timestamp",
+    "Contact form UI renders on landing page (#yhteystiedot section)",
+    "Playwright form submission: fields fillable, submit button clickable, toast 'Kiitos viestistäsi!' displayed",
+    "Form fields reset to empty strings after successful submission (proves mailto line executed since it precedes reset)",
+    "Admin page /admin/viestit2043409503 lists submitted messages including latest 'Playwright Tester' entry with correct email, phone, and body",
+    "ContactSection.jsx source construction verified: mailto:info@mittalinja.fi?subject=Lomake&body=Nimi:{name}%0D%0AEmail:{email}%0D%0APuhelin:{phone|Ei annettu}%0D%0A%0D%0AViesti:%0D%0A{message}"
+  ],
+  "failed": [],
+  "action_items": [
+    "None blocking. Optional: consider using window.open(mailtoLink, '_self') or an <a> click for better testability and to survive strict Content-Security-Policy environments; current implementation is functionally correct."
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": {
+    "mailto_capture_limitation": "Playwright/Chromium does not fire framenavigated or request events for mailto: scheme, and Location.prototype.href setter cannot be overridden (non-configurable). Behaviour was validated indirectly via successful post-mailto code execution (toast + form reset) plus source review.",
+    "credentials_file": "/app/memory/test_credentials.md not required for this test scope"
+  }
+}

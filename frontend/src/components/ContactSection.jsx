@@ -33,6 +33,13 @@ const ContactSection = () => {
           duration: 5000
         });
         
+        // Create mailto link with form data
+        const mailtoBody = `Nimi: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APuhelin: ${formData.phone || 'Ei annettu'}%0D%0A%0D%0AViesti:%0D%0A${formData.message}`;
+        const mailtoLink = `mailto:info@mittalinja.fi?subject=Lomake&body=${mailtoBody}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
         // Reset form
         setFormData({ name: '', email: '', phone: '', message: '', honeypot: '' });
       }
