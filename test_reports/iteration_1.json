@@ -1,0 +1,16 @@
+{
+  "summary": "Verified mailto links in Header (desktop + mobile menu) and Footer render with correct href 'mailto:info@mittalinja.fi?subject=Lomake'. All 3 links present with correct format.",
+  "tested_scope": ["frontend"],
+  "passed": [
+    "Desktop header email link: href='mailto:info@mittalinja.fi?subject=Lomake', text='info@mittalinja.fi'",
+    "Footer email link: href='mailto:info@mittalinja.fi?subject=Lomake', text='info@mittalinja.fi'",
+    "Mobile menu email link (after opening hamburger): href='mailto:info@mittalinja.fi?subject=Lomake', visible=true",
+    "All 3 mailto links use the exact expected format with subject=Lomake parameter"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "N/A - skipped", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "Cannot verify actual email client behavior in headless browser (mailto: opens OS-level client). Verified href attributes are correct — this is the correct/complete fix for the reported bug. Browser/OS will handle mailto protocol properly with this format."
+}

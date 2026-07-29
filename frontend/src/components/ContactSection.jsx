@@ -149,21 +149,10 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-
-            {/* Additional Info */}
-            <div className="bg-blue-600 rounded-2xl p-8 text-white shadow-lg">
-              <h4 className="text-2xl font-bold mb-4">
-                Pidämme huolta hyvästä ja luotettavasta lopputuloksesta
-              </h4>
-              <p className="text-blue-100 leading-relaxed">
-                Pyrimme aina vastaamaan yhteydenottoihin 24 tunnin sisällä. Ota rohkeasti yhteyttä 
-                ja kysy tarjouksemme kohteestasi!
-              </p>
-            </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100 h-fit">
             <h4 className="text-2xl font-bold text-gray-900 mb-6">Lähetä viesti</h4>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -253,6 +242,19 @@ const ContactSection = () => {
                 Vastaamme yhteydenottoihin arkipäivisin 24 tunnin sisällä.
               </p>
             </form>
+          </div>
+        </div>
+
+        {/* Additional Info - Centered below */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-blue-600 rounded-2xl p-8 md:p-12 text-white shadow-lg text-center">
+            <h4 className="text-2xl md:text-3xl font-bold mb-4">
+              Pidämme huolta hyvästä ja luotettavasta lopputuloksesta
+            </h4>
+            <p className="text-blue-100 leading-relaxed text-lg">
+              Pyrimme aina vastaamaan yhteydenottoihin 24 tunnin sisällä. Ota rohkeasti yhteyttä 
+              ja kysy tarjouksemme kohteestasi!
+            </p>
           </div>
         </div>
 

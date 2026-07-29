@@ -42,7 +42,7 @@ const Footer = () => {
                 <span>0400 460 872</span>
               </a>
               <a
-                href="mailto:info@mittalinja.fi"
+                href="mailto:info@mittalinja.fi?subject=Lomake"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors duration-200"
               >
                 <Mail className="w-5 h-5 flex-shrink-0" />

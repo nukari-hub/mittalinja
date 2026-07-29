@@ -106,7 +106,7 @@ const Header = () => {
           {/* Desktop Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="mailto:info@mittalinja.fi"
+              href="mailto:info@mittalinja.fi?subject=Lomake"
               className="hidden xl:flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
               <Mail className="w-4 h-4" />
@@ -202,7 +202,7 @@ const Header = () => {
                   <span className="font-medium">0400 460 872</span>
                 </a>
                 <a
-                  href="mailto:info@mittalinja.fi"
+                  href="mailto:info@mittalinja.fi?subject=Lomake"
                   className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
