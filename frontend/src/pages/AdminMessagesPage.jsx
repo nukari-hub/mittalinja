@@ -19,6 +19,10 @@ const AdminMessagesPage = () => {
   const fetchMessages = async () => {
     try {
       setLoading(true);
+      if (!BACKEND_URL) {
+        setMessages([]);
+        return;
+      }
       const response = await axios.get(`${BACKEND_URL}/api/contact/messages`);
       if (response.data.success) {
         setMessages(response.data.messages);

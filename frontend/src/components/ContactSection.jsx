@@ -6,7 +6,7 @@ import { useToast } from '../hooks/use-toast';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import axios from 'axios';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -23,34 +23,42 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const mailtoBody = `Nimi: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APuhelin: ${formData.phone || 'Ei annettu'}%0D%0A%0D%0AViesti:%0D%0A${formData.message}`;
+    const mailtoLink = `mailto:info@mittalinja.fi?subject=Lomake&body=${mailtoBody}`;
+
     try {
-      const response = await axios.post(`${BACKEND_URL}/api/contact`, formData);
-      
-      if (response.data.success) {
-        toast({
-          title: 'Kiitos viestistäsi!',
-          description: response.data.message,
-          duration: 5000
-        });
-        
-        // Create mailto link with form data
-        const mailtoBody = `Nimi: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APuhelin: ${formData.phone || 'Ei annettu'}%0D%0A%0D%0AViesti:%0D%0A${formData.message}`;
-        const mailtoLink = `mailto:info@mittalinja.fi?subject=Lomake&body=${mailtoBody}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Reset form
-        setFormData({ name: '', email: '', phone: '', message: '', honeypot: '' });
+      if (BACKEND_URL) {
+        const response = await axios.post(`${BACKEND_URL}/api/contact`, formData);
+
+        if (response.data.success) {
+          toast({
+            title: 'Kiitos viestistäsi!',
+            description: response.data.message,
+            duration: 5000
+          });
+
+          window.location.href = mailtoLink;
+          setFormData({ name: '', email: '', phone: '', message: '', honeypot: '' });
+          return;
+        }
       }
+
+      toast({
+        title: 'Kiitos viestistäsi!',
+        description: 'Sähköpostiohjelma avautuu, niin voit lähettää viestin suoraan.',
+        duration: 5000
+      });
+      window.location.href = mailtoLink;
+      setFormData({ name: '', email: '', phone: '', message: '', honeypot: '' });
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
         title: 'Virhe',
-        description: error.response?.data?.detail || 'Viestin lähettäminen epäonnistui. Yritä myöhemmin uudelleen tai soita meille.',
+        description: 'Viestin lähettäminen epäonnistui. Voit lähettää viestin myös suoraan sähköpostitse info@mittalinja.fi.',
         variant: 'destructive',
         duration: 5000
       });
+      window.location.href = mailtoLink;
     } finally {
       setIsSubmitting(false);
     }
